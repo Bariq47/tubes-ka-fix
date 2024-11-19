@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: laravel-app
-    container_name: pemfra-laravel-app
+    image: tubes-ka
+    container_name: laravel-tubes-ka
     restart: unless-stopped
     working_dir: /var/www/html
     volumes:
@@ -25,11 +25,11 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: pemfra-mysql-db
+    container_name: mysql-pemfra-db
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: laravel
+      MYSQL_DATABASE: tubes_ka
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
